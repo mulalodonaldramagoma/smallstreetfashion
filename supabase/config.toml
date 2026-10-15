@@ -1,0 +1,19 @@
+[functions.paystack-initialize]
+verify_jwt = true
+entrypoint = "./functions/paystack-initialize/index.ts"
+
+[functions.paystack-webhook]
+verify_jwt = false
+entrypoint = "./functions/paystack-webhook/index.ts"
+
+[functions.courier-create-shipment]
+verify_jwt = true
+entrypoint = "./functions/courier-create-shipment/index.ts"
+
+[functions.courier-webhook]
+verify_jwt = false
+entrypoint = "./functions/courier-webhook/index.ts"
+
+[functions.send-notification]
+verify_jwt = true
+entrypoint = "./functions/send-notification/index.ts"
