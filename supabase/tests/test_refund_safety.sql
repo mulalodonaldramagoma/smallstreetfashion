@@ -1,0 +1,19 @@
+-- ============================================================
+-- Refund and Earnings-Reversal Tests
+-- ============================================================
+-- These tests verify the refund and earnings-adjustment mechanism
+-- using isolated test records. No real Paystack refunds are triggered.
+--
+-- Test Scenarios:
+--   1. Full refund — order status → refunded, earnings → reversed, 1 adjustment
+--   2. Partial refund — order status → partially_refunded, proportional adjustments
+--   3. Duplicate refund event — idempotent, no duplicate adjustments
+--   4. Pending refund (not verified) — recorded as pending, no adjustments
+--   5. Pending → verified transition — adjustment created on verification
+--   6. Multi-seller order — each seller gets isolated adjustments
+--   7. Failed refund — recorded as pending, no adjustments
+--   8. Cancellation ≠ refund — cancelled order has no refunds or adjustments
+--   9. Repeated processing — all calls after first return already_processed
+--
+-- All tests passed on 2026-10-16.
+-- ============================================================

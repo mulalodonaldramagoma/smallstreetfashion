@@ -1,0 +1,20 @@
+-- 020: Revoke EXECUTE from PUBLIC on all SECURITY DEFINER functions
+REVOKE EXECUTE ON FUNCTION public.handle_new_user() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.handle_new_user() FROM anon;
+REVOKE EXECUTE ON FUNCTION public.handle_new_user() FROM authenticated;
+REVOKE EXECUTE ON FUNCTION public.enforce_role_immutable() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.enforce_role_immutable() FROM anon;
+REVOKE EXECUTE ON FUNCTION public.enforce_role_immutable() FROM authenticated;
+REVOKE EXECUTE ON FUNCTION public.decrement_stock(uuid, integer) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.decrement_stock(uuid, integer) FROM anon;
+GRANT EXECUTE ON FUNCTION public.decrement_stock(uuid, integer) TO authenticated;
+REVOKE EXECUTE ON FUNCTION public.generate_order_number() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.generate_order_number() FROM anon;
+GRANT EXECUTE ON FUNCTION public.generate_order_number() TO authenticated;
+REVOKE EXECUTE ON FUNCTION public.insert_tracking_event(uuid, text, text, text, timestamptz, text, jsonb) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.insert_tracking_event(uuid, text, text, text, timestamptz, text, jsonb) FROM anon;
+REVOKE EXECUTE ON FUNCTION public.insert_tracking_event(uuid, text, text, text, timestamptz, text, jsonb) FROM authenticated;
+GRANT EXECUTE ON FUNCTION public.insert_tracking_event(uuid, text, text, text, timestamptz, text, jsonb) TO service_role;
+REVOKE EXECUTE ON FUNCTION public.admin_set_user_role(uuid, text) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.admin_set_user_role(uuid, text) FROM anon;
+GRANT EXECUTE ON FUNCTION public.admin_set_user_role(uuid, text) TO authenticated;

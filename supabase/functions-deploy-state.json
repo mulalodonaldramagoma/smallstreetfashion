@@ -1,0 +1,25 @@
+{
+  "projectId": "72271200",
+  "functions": {
+    "courier-create-shipment": {
+      "hasChanged": false,
+      "hash": "c2e5307c01fe8a984d692d21175ef9ce55a1163c090cdbdcd83cca2e84ed204d"
+    },
+    "courier-webhook": {
+      "hasChanged": false,
+      "hash": "09fcba2867234aa4b49e8c2948da984e5b3944409597ea927060c8b9534344c0"
+    },
+    "paystack-initialize": {
+      "hasChanged": false,
+      "hash": "75c9bb4a26686859dd49396d0f1baea0af59148efca538f2b681159d01904675"
+    },
+    "paystack-webhook": {
+      "hasChanged": false,
+      "hash": "f2c796adffd6db239b9d891f78537be7b8006d3c99ea66b7217de79571fa2f39"
+    },
+    "send-notification": {
+      "hasChanged": false,
+      "hash": "3f399328f1e27b9e644157880c608870a2bbe125522ef792cde505a0fbb29555"
+    }
+  }
+}
